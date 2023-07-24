@@ -6,6 +6,8 @@ if grep -q "Ubuntu" $release
 then
     echo "It's Ubuntu based distro"
     source update.sh
+    source docker-installers/ubuntu.sh
+    source docker-installers/post-install.sh
 fi
 
 if grep -q "Debian" $release
