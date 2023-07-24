@@ -16,15 +16,11 @@ then
     source docker-installers/post-install.sh
 fi
 
-if grep -q "Arch" $release
-then
-    echo "It's Arch based distro"
-    source update.sh
-fi
-
 if grep -q "Fedora" $release || grep -q "Red Hat" $release || grep -q "CentOS" $release
 then
     echo "It's Fedora/RHEL/CentOS based distro"
     source update.sh
+    source docker-installers/fedora.sh
+    source docker-installers/post-install.sh
 fi
 
