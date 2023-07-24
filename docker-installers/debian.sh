@@ -25,6 +25,6 @@ echo "Updateing repository"
 
 sudo $INSTALLER update
 
-sudo $INSTALLER install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo $INSTALLER install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 
